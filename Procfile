@@ -1,1 +1,1 @@
-web: gunicorn RestfulEncoderDecoder.wsgi --log-file -
+web: gunicorn simple_api.wsgi --log-file -
