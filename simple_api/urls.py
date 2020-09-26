@@ -15,10 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from simple_api.encoder_decoder.api import encoder_router, decoder_router
+from simple_api.encoder_decoder.api import router
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('v1/', include(encoder_router.urls)),
-    path('v2/', include(decoder_router.urls)),
+    path('v1/', include(router.urls)),
 ]
