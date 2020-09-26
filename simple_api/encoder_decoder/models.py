@@ -24,7 +24,7 @@ class Decoding(models.Model):
     def save(self, *args, **kwargs):
         decoder = Decoder()
         self.decoded_text = decoder.decode(
-            text_to_decode=str(self).replace('\\n', '\n').rstrip()
+            text_to_decode=str(self).rstrip().replace('\\n', '\n')
         )
         super().save(*args, **kwargs)
 
